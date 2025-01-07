@@ -1,0 +1,88 @@
+/* Mengatur tampilan dasar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.content-section {
+    display: none;
+    padding: 40px 0;
+}
+
+.content-section h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Menampilkan bagian pertama kali */
+.content-section.active {
+    display: block;
+}
+.content-section h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+}
+
+.card .card-body i {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+/* Tampilan dasar galeri */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zoom-in efek pada gambar saat hover */
+}
+
+/* Overlay untuk menampilkan informasi */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 15px;
+    text-align: center;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1; /* Tampilkan overlay saat hover */
+}
+
+.gallery-overlay h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-overlay p {
+    font-size: 0.9rem;
+    margin: 0;
+}
